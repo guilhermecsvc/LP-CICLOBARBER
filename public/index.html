@@ -225,6 +225,13 @@ footer{padding:56px 0 28px;border-top:1px solid var(--ln);background:#0d0f10}
 .cp{font-size:.82rem;color:var(--pr);margin-top:20px}
 dialog{max-width:640px;width:calc(100% - 32px);background:var(--gr);color:var(--of);border:1.5px solid var(--li);border-radius:16px;padding:26px}
 dialog::backdrop{background:rgba(0,0,0,.7)}
+.ck{display:flex;gap:10px;align-items:flex-start;margin:14px 0;font-size:.92rem;color:var(--of);cursor:pointer}
+.ck input{width:20px;height:20px;margin-top:2px;accent-color:#C9F264;flex:none}
+.ck a,.ck .lk{color:var(--li)}
+#co .res{font-weight:700;color:var(--of);font-size:1.05rem;margin:4px 0 12px}
+#co .row{display:flex;gap:10px;flex-wrap:wrap;margin-top:14px}
+#co .btn[disabled]{opacity:.45;cursor:not-allowed}
+
 dialog h3{font-size:1.3rem}dialog p,dialog li{font-size:.92rem;color:var(--pr)}dialog ul{padding-left:20px}
 
 .wa{display:none;position:fixed;right:18px;bottom:calc(18px + env(safe-area-inset-bottom,0px));z-index:26;width:58px;height:58px;border-radius:50%;background:#25d366;align-items:center;justify-content:center;box-shadow:0 8px 24px rgba(0,0,0,.5)}
@@ -251,8 +258,8 @@ textarea{width:100%;background:#111315;color:var(--of);border:1px solid var(--ln
 
 <header><div class="w nav">
 <a class="lg" href="#topo" aria-label="CicloBarber">CicloBarber</a>
-<nav id="nav" aria-label="Principal"><ul><li><a href="#como-funciona">Como funciona</a></li><li><a href="#recursos">Benefícios</a></li><li><a href="#para-quem">Para quem é</a></li></ul></nav>
-<a class="btn p" href="#contato" data-cta="header">Contratar agora</a>
+<nav id="nav" aria-label="Principal"><ul><li><a href="#como-funciona">Como funciona</a></li><li><a href="#recursos">Benefícios</a></li><li><a href="#planos">Preços</a></li><li><a href="#para-quem">Para quem é</a></li></ul></nav>
+<a class="btn p" href="#planos" data-cta="header">Contratar agora</a>
 <button class="mb" id="mb" aria-expanded="false" aria-controls="nav">Menu</button>
 </div></header>
 
@@ -275,7 +282,7 @@ textarea{width:100%;background:#111315;color:var(--of);border:1px solid var(--ln
 <span class="eb">Retenção inteligente para barbearias</span>
 <h1>Saiba quem precisa voltar à sua barbearia antes de perder o cliente.</h1>
 <p class="sub">Com o CicloBarber, você acompanha o ciclo de retorno dos seus clientes, identifica quem está atrasado e descobre oportunidades para trazer de volta quem deixou de aparecer.</p>
-<div class="cta"><a class="btn p" href="#contato" data-cta="hero_principal">Quero contratar o CicloBarber</a><a class="btn s" href="#dor" data-cta="hero_secundario">Conhecer mais</a></div>
+<div class="cta"><a class="btn p" href="#planos" data-cta="hero_principal">Quero contratar o CicloBarber</a><a class="btn s" href="#dor" data-cta="hero_secundario">Conhecer mais</a></div>
 <p>Mais clareza sobre sua clientela. Menos clientes esquecidos. Comece sem depender de planilhas ou da memória.</p>
 </div>
 <div class="mock" role="img" aria-label="Demonstração fictícia da lista de clientes com status de retorno">
@@ -319,7 +326,7 @@ textarea{width:100%;background:#111315;color:var(--of);border:1px solid var(--ln
 <div class="tp on" id="t1" role="tabpanel" aria-labelledby="b1"><ul><li style="--i:0">Clientes, atendimentos e retorno organizados em um só lugar.</li><li style="--i:1">Receitas, despesas e caixa organizados para você enxergar o mês com clareza.</li><li style="--i:2">A comissão de cada barbeiro calculada a partir dos atendimentos registrados.</li><li style="--i:3">Você sabe quem está perto de voltar, atrasado ou inativo, sem depender da memória.</li><li style="--i:4">Mais chance de desligar do trabalho com a cabeça mais leve.</li></ul></div>
 </div></section>
 
-<div class="strip"><div class="w"><p>Chega de levar a barbearia na cabeça para casa.</p><a class="btn p" href="#contato" data-cta="faixa_1">Quero contratar o CicloBarber</a></div></div>
+<div class="strip"><div class="w"><p>Chega de levar a barbearia na cabeça para casa.</p><a class="btn p" href="#planos" data-cta="faixa_1">Quero contratar o CicloBarber</a></div></div>
 
 <section class="alt" id="como-funciona"><div class="w">
 <span class="eb">Como funciona</span>
@@ -361,7 +368,7 @@ textarea{width:100%;background:#111315;color:var(--of);border:1px solid var(--ln
 <p class="note">Nomes e dados fictícios. O ritmo é estimado pela mediana dos intervalos entre as visitas; a regra real do sistema pode ser diferente e ainda será definida.</p>
 </div></section>
 
-<div class="strip"><div class="w"><p>Organize sua clientela e saiba quem merece atenção hoje.</p><a class="btn p" href="#contato" data-cta="faixa_2">Quero contratar o CicloBarber</a></div></div>
+<div class="strip"><div class="w"><p>Organize sua clientela e saiba quem merece atenção hoje.</p><a class="btn p" href="#planos" data-cta="faixa_2">Quero contratar o CicloBarber</a></div></div>
 
 <section id="prova" hidden><div class="w">
 <span class="eb">Quem já usa</span>
@@ -400,7 +407,7 @@ textarea{width:100%;background:#111315;color:var(--of);border:1px solid var(--ln
 <p class="pr"><span class="pm"><b>R$ 49</b>/mês</span><span class="pa"><b>R$ 490</b>/ano</span></p>
 <p class="pq"><span class="pm">Cobrança mensal.</span><span class="pa">Equivale a R$ 40,83/mês. Você paga 10 meses e usa 12.</span></p>
 <ul><li>1 barbeiro e até 300 clientes ativos</li><li>Cadastro de clientes com histórico de cortes</li><li>Ritmo de cada cliente: em dia, perto de voltar, atrasado ou sumido</li><li>Painel “quem merece atenção agora”</li><li>Resgate completo de clientes atrasados e sumidos, sem limite</li><li>Mensagem pronta para o WhatsApp (tom padrão)</li><li>Receita do mês, ticket médio e receita em risco</li></ul>
-<a class="btn s" href="#contato" data-plano="Essencial" data-cta="plano_essencial">Contratar Essencial<span class="sro"> (abre o WhatsApp)</span></a>
+<a class="btn s" href="#contato" data-plano="Essencial" data-cta="plano_essencial">Contratar Essencial<span class="sro"> (continua para o pagamento)</span></a>
 </article>
 
 <article class="pc ft rv" style="--i:1" aria-labelledby="pn-p">
@@ -411,7 +418,7 @@ textarea{width:100%;background:#111315;color:var(--of);border:1px solid var(--ln
 <p class="pq"><span class="pm">Cobrança mensal.</span><span class="pa">Equivale a R$ 74,17/mês. Você paga 10 meses e usa 12.</span></p>
 <p class="pl0">Tudo do Essencial, mais:</p>
 <ul><li>Até 5 barbeiros e clientes sem limite</li><li>Mensagens com o estilo da sua barbearia (tom, emojis e tamanho)</li><li>Receita recuperada: quanto dinheiro voltou com o Resgate</li><li>Despesas, contas fixas, contas a pagar e resultado do mês</li><li>Caixa diário</li><li>Comissões dos barbeiros</li></ul>
-<a class="btn p" href="#contato" data-plano="Profissional" data-cta="plano_profissional">Contratar Profissional<span class="sro"> (abre o WhatsApp)</span></a>
+<a class="btn p" href="#contato" data-plano="Profissional" data-cta="plano_profissional">Contratar Profissional<span class="sro"> (continua para o pagamento)</span></a>
 </article>
 
 <article class="pc rv" style="--i:2" aria-labelledby="pn-q">
@@ -431,20 +438,21 @@ textarea{width:100%;background:#111315;color:var(--of);border:1px solid var(--ln
 
 <section class="fin pat" id="contato"><div class="glow" aria-hidden="true"></div><div class="w fg">
 <div>
-<h2>Contrate o CicloBarber e não deixe o próximo retorno acontecer por acaso.</h2>
-<p style="font-size:1.05rem">Organize sua clientela, entenda os ciclos de retorno e descubra quais clientes merecem sua atenção.</p>
-<ol class="sp"><li>Preencha seus dados.</li><li>Nossa equipe entra em contato para os próximos passos da contratação.</li><li>Cadastre seus clientes e acompanhe o ciclo de retorno.</li></ol>
+<h2>Ficou com alguma dúvida antes de contratar?</h2>
+<p style="font-size:1.05rem">Envie sua pergunta e nossa equipe responde pelo WhatsApp. Se já se decidiu, escolha seu plano na seção de preços.</p>
+<p><a class="btn p" href="#planos" data-cta="duvida_ver_planos">Ver planos e contratar</a></p>
 <a class="btn s" href="#contato" data-wa data-cta="final_equipe">Prefere conversar? Fale com a equipe</a>
 </div>
 <form id="f" novalidate>
-<h3 style="margin-bottom:16px">Comece pelo seu contato</h3>
+<h3 style="margin-bottom:16px">Envie sua dúvida</h3>
 <div class="fld"><label for="n">Nome</label><input id="n" name="nome" type="text" autocomplete="name" required><span class="er" id="en"></span></div>
 <div class="fld"><label for="w">WhatsApp</label><input id="w" name="whatsapp" type="tel" autocomplete="tel" inputmode="tel" placeholder="(00) 00000-0000" required><span class="er" id="ew"></span></div>
 <div class="fld"><label for="e">E-mail (opcional)</label><input id="e" name="email" type="email" autocomplete="email"><span class="er" id="ee"></span></div>
-<button class="btn p" type="submit" style="width:100%" data-cta="formulario">Quero contratar agora</button>
+<div class="fld"><label for="d">Sua dúvida</label><textarea id="d" name="duvida" rows="3" maxlength="600" required></textarea><span class="er" id="ed"></span></div>
+<button class="btn p" type="submit" style="width:100%" data-cta="formulario_duvida">Enviar dúvida</button>
 <div class="msg" id="m" role="status" aria-live="polite"></div>
 <p class="wl" id="walink" hidden>Prefere conversar agora? <a id="wanum" data-cta="form_whatsapp" target="_blank" rel="noopener"></a></p>
-<p class="pv">Usaremos seus dados apenas para falar sobre a contratação do CicloBarber. Veja a <button type="button" class="lk" id="pp-open">Política de Privacidade</button>.</p>
+<p class="pv">Usaremos seus dados apenas para responder sua dúvida. Veja a <button type="button" class="lk" id="pp-open">Política de Privacidade</button>.</p>
 </form>
 </div></section>
 <section class="alt"><div class="w">
@@ -471,10 +479,26 @@ textarea{width:100%;background:#111315;color:var(--of);border:1px solid var(--ln
 <p>Retenção inteligente para barbearias: acompanhe o ciclo de retorno dos seus clientes e saiba quem merece atenção hoje.</p></div>
 <div><h4>Navegação</h4><ul><li><a href="#como-funciona">Como funciona</a></li><li><a href="#recursos">Benefícios</a></li><li><a href="#demo">Veja na prática</a></li><li><a href="#para-quem">Para quem é</a></li></ul></div>
 <div><h4>Informações</h4><ul><li><button type="button" class="lk" id="pp-open2">Política de Privacidade</button></li><li><span class="mut">Termos de Uso (em breve)</span></li></ul></div>
-<div><h4>Contato</h4><ul><li><a href="#contato">Quero contratar</a></li><li id="ct" hidden></li></ul></div>
+<div><h4>Contato</h4><ul><li><a href="#planos">Quero contratar</a></li><li id="ct" hidden></li></ul></div>
 </div>
 <div class="fbot"><p>© <span id="y"></span> CicloBarber. Todos os direitos reservados.</p><p>Os dados exibidos na demonstração são fictícios.</p></div>
 </div></footer>
+
+<dialog id="co" aria-labelledby="coh">
+<h3 id="coh">Contratar plano <span id="co-plano"></span></h3>
+<p class="res" id="co-res"></p>
+<div id="co-on" hidden>
+<p>Você será levado à página de pagamento do nosso parceiro, o Asaas. Os dados do seu cartão não passam por esta página.</p>
+<p>O CicloBarber está em fase de lançamento. Depois do pagamento você verá uma página com os próximos passos. O acesso ao sistema não é imediato.</p>
+<label class="ck" for="co-ok"><input type="checkbox" id="co-ok"><span>Li e aceito os <a id="co-termos" href="#" target="_blank" rel="noopener">Termos de Uso</a> e a <button type="button" class="lk" id="co-pp">Política de Privacidade</button>.</span></label>
+<div class="row"><button type="button" class="btn p" id="co-go" disabled>Ir para o pagamento</button></div>
+</div>
+<div id="co-off" hidden>
+<p>O pagamento online deste plano ainda está sendo liberado. Para contratar agora, fale com a equipe pelo WhatsApp.</p>
+<div class="row"><a class="btn p" id="co-wa" href="#contato" data-cta="checkout_indisponivel_whatsapp">Falar com a equipe</a></div>
+</div>
+<form method="dialog" style="background:none;border:0;padding:0"><button class="btn s" style="margin-top:14px">Fechar</button></form>
+</dialog>
 
 <dialog id="pp" aria-labelledby="pph">
 <h3 id="pph">Política de Privacidade</h3>
@@ -490,13 +514,15 @@ textarea{width:100%;background:#111315;color:var(--of);border:1px solid var(--ln
 
 <script>
 /* ===== CONFIGURAÇÃO CENTRAL (preencha aqui) =====
-   FORM_ENDPOINT : URL que recebe o formulário (POST JSON com nome, email, whatsapp).
+   FORM_ENDPOINT : URL que recebe o formulário de dúvidas (POST JSON com nome, email, whatsapp, duvida).
+   CHECKOUT      : links de pagamento HOSPEDADOS (https) de cada plano e período. Nunca coloque chaves secretas aqui.
+   TERMS_URL     : endereço da página de Termos de Uso. Sem ele, o checkout não é liberado.
    WHATSAPP_NUMBER: só dígitos com DDI+DDD, ex.: "5561999999999". Vazio = botões de "equipe" levam ao formulário.
    WHATSAPP_MSG  : mensagem inicial pré-preenchida.
    CONTACT_EMAIL : e-mail de contato exibido no rodapé (opcional).
    HERO_PHOTO    : URL de uma foto real de barbearia para o fundo do topo (opcional, com permissão de uso).
    TESTIMONIALS  : [{texto:"...", nome:"..."}] — só depoimentos REAIS. Vazio = a seção não aparece. */
-var CONFIG = { FORM_ENDPOINT:"", WHATSAPP_NUMBER:"5561996760101", WHATSAPP_MSG:"Olá! Quero contratar o CicloBarber.", CONTACT_EMAIL:"", HERO_PHOTO:"", TESTIMONIALS:[] };
+var CONFIG = { FORM_ENDPOINT:"", CHECKOUT:{Essencial:{m:"",a:""},Profissional:{m:"",a:""}}, TERMS_URL:"", WHATSAPP_NUMBER:"5561996760101", WHATSAPP_MSG:"Olá! Quero contratar o CicloBarber.", CONTACT_EMAIL:"", HERO_PHOTO:"", TESTIMONIALS:[] };
 var $ = function(i){ return document.getElementById(i); };
 var RM = window.matchMedia && matchMedia("(prefers-reduced-motion: reduce)").matches;
 $("y").textContent = new Date().getFullYear();
@@ -522,6 +548,27 @@ var waUrl = CONFIG.WHATSAPP_NUMBER ? "https://wa.me/" + CONFIG.WHATSAPP_NUMBER.r
   }
   btns.forEach(function(b){ b.addEventListener("click", function(){ per = b.getAttribute("data-per"); apply(true); track("plano_periodo_ciclobarber",{periodo:per}); }); });
   apply(false);
+
+  /* ----- pré-checkout: aceite dos termos e envio ao pagamento hospedado ----- */
+  var PRICE = {Essencial:{m:"R$ 49/mês",a:"R$ 490/ano"}, Profissional:{m:"R$ 89/mês",a:"R$ 890/ano"}};
+  var co = $("co"), cur = {};
+  function okUrl(u){ return typeof u === "string" && /^https:\/\//.test(u); }
+  function openCo(plano){
+    var u = (CONFIG.CHECKOUT[plano] || {})[per], terms = CONFIG.TERMS_URL;
+    cur = {plano:plano, per:per, url:u};
+    $("co-plano").textContent = plano + (per === "a" ? " anual" : " mensal");
+    $("co-res").textContent = PRICE[plano][per];
+    var ready = okUrl(u) && /^(https:\/\/|\/)/.test(terms || "");
+    $("co-on").hidden = !ready; $("co-off").hidden = ready;
+    $("co-ok").checked = false; $("co-go").disabled = true;
+    if (ready){ $("co-termos").href = terms; }
+    else if (CONFIG.WHATSAPP_NUMBER){ $("co-wa").href = "https://wa.me/" + CONFIG.WHATSAPP_NUMBER.replace(/\D/g,"") + "?text=" + encodeURIComponent("Olá! Quero contratar o plano " + plano + (per === "a" ? " anual." : " mensal.")); $("co-wa").target = "_blank"; $("co-wa").rel = "noopener"; }
+    if (co.showModal) co.showModal(); else co.setAttribute("open","");
+  }
+  sec.querySelectorAll("[data-plano=Essencial],[data-plano=Profissional]").forEach(function(a){ a.addEventListener("click", function(ev){ ev.preventDefault(); openCo(a.getAttribute("data-plano")); }); });
+  $("co-ok").addEventListener("change", function(){ $("co-go").disabled = !this.checked; });
+  $("co-pp").addEventListener("click", function(){ if (typeof openPP === "function") openPP(); });
+  $("co-go").addEventListener("click", function(){ if (!$("co-ok").checked || !okUrl(cur.url)) return; track("click_checkout_ciclobarber",{plano:cur.plano, periodo:cur.per}); window.location.href = cur.url; });
 })();
 document.querySelectorAll("[data-wa]").forEach(function(a){ if (waUrl){ a.href = waUrl; a.target = "_blank"; a.rel = "noopener"; } });
 if (waUrl){ var fab = $("wafab"); fab.href = waUrl; fab.classList.add("show"); }
@@ -612,13 +659,13 @@ $("pp-open").addEventListener("click", openPP); $("pp-open2").addEventListener("
 var f = $("f"), m = $("m");
 f.addEventListener("submit", function(ev){
   ev.preventDefault();
-  var n = f.nome.value.trim(), e = f.email.value.trim(), w = f.whatsapp.value.replace(/\D/g,"");
-  var en = !n ? "Informe seu nome." : "", ew = (w.length < 10 || w.length > 13) ? "Informe seu WhatsApp com DDD." : "", ee = e && !/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(e) ? "Esse e-mail não parece válido." : "";
-  $("en").textContent = en; $("ee").textContent = ee; $("ew").textContent = ew; m.className = "msg";
-  if (en || ee || ew){ (en ? f.nome : ew ? f.whatsapp : f.email).focus(); return; }
+  var n = f.nome.value.trim(), e = f.email.value.trim(), w = f.whatsapp.value.replace(/\D/g,""), d = f.duvida.value.trim();
+  var en = !n ? "Informe seu nome." : "", ew = (w.length < 10 || w.length > 13) ? "Informe seu WhatsApp com DDD." : "", ee = e && !/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(e) ? "Esse e-mail não parece válido." : "", ed = !d ? "Escreva sua dúvida." : "";
+  $("en").textContent = en; $("ed").textContent = ed; $("ee").textContent = ee; $("ew").textContent = ew; m.className = "msg";
+  if (en || ee || ew || ed){ (en ? f.nome : ew ? f.whatsapp : ee ? f.email : f.duvida).focus(); return; }
   if (!CONFIG.FORM_ENDPOINT){ m.className = "msg bad"; m.textContent = "O envio ainda não está configurado nesta versão. Seus dados não foram enviados."; return; }
-  fetch(CONFIG.FORM_ENDPOINT, {method:"POST", headers:{"Content-Type":"application/json"}, body:JSON.stringify({nome:n, email:e, whatsapp:w})})
-    .then(function(r){ if (!r.ok) throw 0; m.className = "msg ok"; m.textContent = "Recebemos seu interesse. Obrigado!"; track("lead_ciclobarber",{cta_location:"formulario"}); f.reset(); })
+  fetch(CONFIG.FORM_ENDPOINT, {method:"POST", headers:{"Content-Type":"application/json"}, body:JSON.stringify({nome:n, email:e, whatsapp:w, duvida:d})})
+    .then(function(r){ if (!r.ok) throw 0; m.className = "msg ok"; m.textContent = "Recebemos sua dúvida. Responderemos pelo WhatsApp."; track("lead_ciclobarber",{cta_location:"formulario_duvida"}); f.reset(); })
     .catch(function(){ m.className = "msg bad"; m.textContent = "Não foi possível enviar agora. Tente novamente em instantes."; });
 });
 </script>
