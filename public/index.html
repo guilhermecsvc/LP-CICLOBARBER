@@ -413,7 +413,7 @@ textarea{width:100%;background:#111315;color:var(--of);border:1px solid var(--ln
 </article>
 
 <article class="pc ft rv" style="--i:1" aria-labelledby="pn-p">
-<span class="pbd">Mais escolhido</span>
+<span class="pbd">Recomendado</span>
 <h3 id="pn-p">Profissional</h3>
 <p class="pf">Para a barbearia com equipe pequena.</p>
 <p class="pr"><span class="pm"><b>R$ 89</b>/mês</span><span class="pa"><b>R$ 890</b>/ano</span></p>
@@ -470,13 +470,11 @@ textarea{width:100%;background:#111315;color:var(--of);border:1px solid var(--ln
 <form id="f" novalidate>
 <h3 style="margin-bottom:16px">Envie sua dúvida</h3>
 <div class="fld"><label for="n">Nome</label><input id="n" name="nome" type="text" autocomplete="name" required><span class="er" id="en"></span></div>
-<div class="fld"><label for="w">WhatsApp</label><input id="w" name="whatsapp" type="tel" autocomplete="tel" inputmode="tel" placeholder="(00) 00000-0000" required><span class="er" id="ew"></span></div>
-<div class="fld"><label for="e">E-mail (opcional)</label><input id="e" name="email" type="email" autocomplete="email"><span class="er" id="ee"></span></div>
 <div class="fld"><label for="d">Sua dúvida</label><textarea id="d" name="duvida" rows="3" maxlength="600" required></textarea><span class="er" id="ed"></span></div>
-<button class="btn p" type="submit" style="width:100%" data-cta="formulario_duvida">Enviar dúvida</button>
+<button class="btn p" type="submit" style="width:100%" data-cta="formulario_duvida">Enviar dúvida pelo WhatsApp</button>
 <div class="msg" id="m" role="status" aria-live="polite"></div>
 <p class="wl" id="walink" hidden>Prefere conversar agora? <a id="wanum" data-cta="form_whatsapp" target="_blank" rel="noopener"></a></p>
-<p class="pv">Usaremos seus dados apenas para responder sua dúvida. Veja a <button type="button" class="lk" id="pp-open">Política de Privacidade</button>.</p>
+<p class="pv">Ao enviar, abriremos o seu WhatsApp com a mensagem pronta e você confirma o envio por lá. Seu nome e sua dúvida não passam por nenhum servidor nosso. Veja a <button type="button" class="lk" id="pp-open">Política de Privacidade</button>.</p>
 </form>
 </div></section>
 <section class="alt"><div class="w">
@@ -518,8 +516,8 @@ textarea{width:100%;background:#111315;color:var(--of);border:1px solid var(--ln
 
 <dialog id="pp" aria-labelledby="pph">
 <h3 id="pph">Política de Privacidade</h3>
-<p><b>Quais dados coletamos:</b> nome, WhatsApp e, se você informar, e-mail. Eles são enviados apenas por meio do formulário desta página.</p>
-<p><b>Para que usamos:</b> para entrar em contato com você sobre a contratação do CicloBarber.</p>
+<p><b>Quais dados coletamos:</b> nenhum fica guardado por esta página. O formulário só monta uma mensagem com o seu nome e a sua dúvida e abre o seu WhatsApp; o envio é feito por você, e a conversa passa a seguir as regras do WhatsApp.</p>
+<p><b>Para que usamos:</b> para responder à sua dúvida sobre o CicloBarber, se você enviar a mensagem.</p>
 <p><b>Seus direitos (LGPD):</b> você pode pedir a confirmação do tratamento, o acesso, a correção ou a exclusão dos seus dados e retirar o seu consentimento a qualquer momento, pelo canal de contato indicado nesta página.</p>
 <p><b>Por quanto tempo guardamos:</b> pelo tempo necessário para o contato sobre a contratação.</p>
 <p>Esta política será ampliada antes do lançamento oficial do produto.</p>
@@ -530,7 +528,6 @@ textarea{width:100%;background:#111315;color:var(--of);border:1px solid var(--ln
 
 <script>
 /* ===== CONFIGURAÇÃO CENTRAL (preencha aqui) =====
-   FORM_ENDPOINT : URL que recebe o formulário de dúvidas (POST JSON com nome, email, whatsapp, duvida).
    APP_URL       : endereço do aplicativo (ex.: https://ciclobarber-5wem.vercel.app). Trocar pelo domínio próprio antes da venda. A página NÃO fala com o Asaas.
    SALES_OPEN    : false = botões \"Contratar\" mostram aviso de venda em breve. true = levam a APP_URL/criar-conta?plano=...&periodo=... (só na etapa V1).
    WHATSAPP_NUMBER: só dígitos com DDI+DDD, ex.: "5561999999999". Vazio = botões de "equipe" levam ao formulário.
@@ -538,7 +535,7 @@ textarea{width:100%;background:#111315;color:var(--of);border:1px solid var(--ln
    CONTACT_EMAIL : e-mail de contato exibido no rodapé (opcional).
    HERO_PHOTO    : URL de uma foto real de barbearia para o fundo do topo (opcional, com permissão de uso).
    TESTIMONIALS  : [{texto:"...", nome:"..."}] — só depoimentos REAIS. Vazio = a seção não aparece. */
-var CONFIG = { FORM_ENDPOINT:"", APP_URL:"https://ciclobarber-5wem.vercel.app", SALES_OPEN:false, WHATSAPP_NUMBER:"5561996760101", WHATSAPP_MSG:"Olá! Quero contratar o CicloBarber.", CONTACT_EMAIL:"", HERO_PHOTO:"", TESTIMONIALS:[] };
+var CONFIG = { APP_URL:"https://ciclobarber-5wem.vercel.app", SALES_OPEN:false, WHATSAPP_NUMBER:"5561996760101", WHATSAPP_MSG:"Olá! Quero contratar o CicloBarber.", CONTACT_EMAIL:"ciclo.barber.apoio@gmail.com", HERO_PHOTO:"", TESTIMONIALS:[] };
 var $ = function(i){ return document.getElementById(i); };
 var RM = window.matchMedia && matchMedia("(prefers-reduced-motion: reduce)").matches;
 $("y").textContent = new Date().getFullYear();
@@ -676,14 +673,15 @@ $("pp-open").addEventListener("click", openPP); $("pp-open2").addEventListener("
 var f = $("f"), m = $("m");
 f.addEventListener("submit", function(ev){
   ev.preventDefault();
-  var n = f.nome.value.trim(), e = f.email.value.trim(), w = f.whatsapp.value.replace(/\D/g,""), d = f.duvida.value.trim();
-  var en = !n ? "Informe seu nome." : "", ew = (w.length < 10 || w.length > 13) ? "Informe seu WhatsApp com DDD." : "", ee = e && !/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(e) ? "Esse e-mail não parece válido." : "", ed = !d ? "Escreva sua dúvida." : "";
-  $("en").textContent = en; $("ed").textContent = ed; $("ee").textContent = ee; $("ew").textContent = ew; m.className = "msg";
-  if (en || ee || ew || ed){ (en ? f.nome : ew ? f.whatsapp : ee ? f.email : f.duvida).focus(); return; }
-  if (!CONFIG.FORM_ENDPOINT){ m.className = "msg bad"; m.textContent = "O envio ainda não está configurado nesta versão. Seus dados não foram enviados."; return; }
-  fetch(CONFIG.FORM_ENDPOINT, {method:"POST", headers:{"Content-Type":"application/json"}, body:JSON.stringify({nome:n, email:e, whatsapp:w, duvida:d})})
-    .then(function(r){ if (!r.ok) throw 0; m.className = "msg ok"; m.textContent = "Recebemos sua dúvida. Responderemos pelo WhatsApp."; track("lead_ciclobarber",{cta_location:"formulario_duvida"}); f.reset(); })
-    .catch(function(){ m.className = "msg bad"; m.textContent = "Não foi possível enviar agora. Tente novamente em instantes."; });
+  var n = f.nome.value.trim(), d = f.duvida.value.trim();
+  var en = !n ? "Informe seu nome." : "", ed = !d ? "Escreva sua dúvida." : "";
+  $("en").textContent = en; $("ed").textContent = ed; m.className = "msg";
+  if (en || ed){ (en ? f.nome : f.duvida).focus(); return; }
+  if (!waUrl){ m.className = "msg bad"; m.textContent = "O WhatsApp ainda não está configurado nesta versão."; return; }
+  var url = "https://wa.me/" + CONFIG.WHATSAPP_NUMBER.replace(/\D/g,"") + "?text=" + encodeURIComponent("Olá! Sou " + n + ". Tenho uma dúvida sobre o CicloBarber: " + d);
+  track("click_duvida_whatsapp",{cta_location:"formulario_duvida"});
+  window.open(url, "_blank", "noopener");
+  m.className = "msg ok"; m.textContent = "Abrimos o WhatsApp com a sua dúvida. Confirme o envio por lá; a mensagem só vai depois disso.";
 });
 </script>
 </body>
