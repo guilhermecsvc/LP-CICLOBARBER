@@ -228,7 +228,7 @@ input[type=text],input[type=email],input[type=tel]{width:100%;padding:12px 14px;
 .lk{background:none;border:0;padding:0;color:var(--li);font:inherit;text-decoration:underline;cursor:pointer}
 footer{padding:56px 0 28px;border-top:1px solid var(--ln);background:#0d0f10}
 .fg4{display:grid;grid-template-columns:1.6fr 1fr 1fr 1fr;gap:36px}
-.fg4 h4{font:700 .78rem Inter,sans-serif;letter-spacing:.12em;text-transform:uppercase;color:var(--of);margin:0 0 14px}
+.fg4 h3{font:700 .78rem Inter,sans-serif;letter-spacing:.12em;text-transform:uppercase;color:var(--of);margin:0 0 14px}
 .fg4 ul{list-style:none;margin:0;padding:0;display:grid;gap:10px}
 .fg4 a,.fg4 .lk{color:var(--pr);text-decoration:none;font-size:.92rem;background:none;border:0;padding:0;cursor:pointer;font-family:inherit}
 .fg4 .lg{color:#fff;font-size:1.6rem}
@@ -277,6 +277,7 @@ nav a,.fg4 a,.fl a{display:inline-flex;align-items:center;min-height:44px}
 html.js .rv{transition:opacity .4s ease-out,transform .4s ease-out;transition-delay:calc(var(--i,0)*50ms)}
 .btn,.tabs button,.card{transition-duration:.18s}
 @media(prefers-reduced-motion:reduce){.btn:not(:disabled):active,.tabs button:active,.mb:active{transform:none}}
+#contratacao,#contato,#contato+section{content-visibility:auto;contain-intrinsic-size:auto 600px}
 </style>
 </head>
 <body>
@@ -390,7 +391,7 @@ html.js .rv{transition:opacity .4s ease-out,transform .4s ease-out;transition-de
 
 <section class="alt" id="demo"><div class="w">
 <span class="eb">Veja na prática</span>
-<h2 class="rv">Mais do que uma agenda: escolha um cliente e simule o ritmo dele.</h2>
+<h2 class="rv">Escolha um cliente e simule o ritmo dele.</h2>
 <div class="dg">
 <div class="cls" id="cls" role="group" aria-label="Clientes de demonstração"></div>
 <div class="pn" id="pn"></div>
@@ -449,6 +450,7 @@ html.js .rv{transition:opacity .4s ease-out,transform .4s ease-out;transition-de
 
 </div>
 <p class="pz rv">Se o CicloBarber trouxer de volta 2 clientes por mês, ele já se pagou.</p>
+<p class="rv" style="text-align:center;color:var(--pr);font-size:.92rem;margin:10px auto 0;max-width:640px">Reembolso integral em até 7 dias após o primeiro pagamento, e cancelamento a qualquer momento pelo app. Detalhes nos <a href="/termos" style="color:var(--li)">Termos de Uso</a>.</p>
 </div></section>
 
 <section class="alt" id="contratacao" aria-labelledby="ct-h"><div class="w">
@@ -512,9 +514,9 @@ html.js .rv{transition:opacity .4s ease-out,transform .4s ease-out;transition-de
 <div class="fg4">
 <div class="fb"><a class="lg" href="#topo" aria-label="CicloBarber">CicloBarber</a>
 <p>Retenção inteligente para barbearias: acompanhe o ciclo de retorno dos seus clientes e saiba quem merece atenção hoje.</p></div>
-<div><h4>Navegação</h4><ul><li><a href="#como-funciona">Como funciona</a></li><li><a href="#recursos">Benefícios</a></li><li><a href="#demo">Veja na prática</a></li><li><a href="#para-quem">Para quem é</a></li></ul></div>
-<div><h4>Informações</h4><ul><li><a href="/privacidade">Política de Privacidade</a></li><li><a href="/termos">Termos de Uso</a></li></ul></div>
-<div><h4>Contato</h4><ul><li><a href="#planos">Quero contratar</a></li><li id="ct" hidden></li></ul></div>
+<div><h3>Navegação</h3><ul><li><a href="#como-funciona">Como funciona</a></li><li><a href="#recursos">Benefícios</a></li><li><a href="#demo">Veja na prática</a></li><li><a href="#para-quem">Para quem é</a></li></ul></div>
+<div><h3>Informações</h3><ul><li><a href="/privacidade">Política de Privacidade</a></li><li><a href="/termos">Termos de Uso</a></li></ul></div>
+<div><h3>Contato</h3><ul><li><a href="#planos">Quero contratar</a></li><li id="ct" hidden></li></ul></div>
 </div>
 <div class="fbot"><p>© <span id="y"></span> CicloBarber. Todos os direitos reservados.</p><p>Os dados exibidos na demonstração são fictícios.</p></div>
 </div></footer>
