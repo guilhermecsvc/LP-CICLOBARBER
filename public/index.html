@@ -268,6 +268,15 @@ nav{position:absolute;left:0;right:0;top:100%;background:var(--bg);border-bottom
 .msgbx .mh{display:flex;justify-content:space-between;gap:10px;flex-wrap:wrap;font-size:.85rem;margin-bottom:8px;color:var(--pr)}.msgbx .mh b{color:var(--li)}
 textarea{width:100%;background:#111315;color:var(--of);border:1px solid var(--ln);border-radius:9px;padding:12px 14px;font:1rem/1.5 Inter,sans-serif;resize:vertical}
 .mbt{display:flex;gap:8px;flex-wrap:wrap;margin-top:10px}.mbt .btn{padding:10px 16px;font-size:.9rem}
+/* UX: alvos de toque de 44px (Fitts), transições curtas (<300ms) e resposta imediata ao toque */
+.btn,.mb,.tabs button,.lg,#rg,.pt button{min-height:44px}
+.btn:not(:disabled):active,.tabs button:active,.mb:active{transform:scale(.97);transition-duration:.08s}
+#rg{height:44px;margin:0}
+nav a,.fg4 a,.fl a{display:inline-flex;align-items:center;min-height:44px}
+.fg4 ul{gap:0}.fg4 li{margin:0}
+html.js .rv{transition:opacity .4s ease-out,transform .4s ease-out;transition-delay:calc(var(--i,0)*50ms)}
+.btn,.tabs button,.card{transition-duration:.18s}
+@media(prefers-reduced-motion:reduce){.btn:not(:disabled):active,.tabs button:active,.mb:active{transform:none}}
 </style>
 </head>
 <body>
