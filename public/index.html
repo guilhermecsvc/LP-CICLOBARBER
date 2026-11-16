@@ -278,6 +278,13 @@ html.js .rv{transition:opacity .4s ease-out,transform .4s ease-out;transition-de
 .btn,.tabs button,.card{transition-duration:.18s}
 @media(prefers-reduced-motion:reduce){.btn:not(:disabled):active,.tabs button:active,.mb:active{transform:none}}
 #contratacao,#contato,#contato+section{content-visibility:auto;contain-intrinsic-size:auto 600px}
+
+/* Telas reais do app */
+.shots{display:grid;grid-template-columns:repeat(3,1fr);gap:22px;margin-top:34px;align-items:start}
+.shot{margin:0;text-align:center}
+.shot img{width:100%;height:auto;border-radius:18px;border:1px solid var(--ln);display:block;background:var(--gr)}
+.shot figcaption{margin-top:12px;font-size:.92rem;color:var(--mu,inherit);opacity:.85}
+@media(max-width:760px){.shots{grid-template-columns:1fr;max-width:340px;margin-inline:auto}}
 </style>
 </head>
 <body>
@@ -397,6 +404,17 @@ html.js .rv{transition:opacity .4s ease-out,transform .4s ease-out;transition-de
 <div class="pn" id="pn"></div>
 </div>
 <p class="note">Nomes e dados fictícios. O ritmo de cada cliente é a mediana dos últimos intervalos entre as visitas.</p>
+</div></section>
+
+<section id="app" aria-labelledby="app-h"><div class="w">
+<span class="eb">O app por dentro</span>
+<h2 class="rv" id="app-h">Telas reais do CicloBarber.</h2>
+<div class="shots">
+<figure class="shot rv" style="--i:0"><img src="img/app-painel.webp" width="480" height="1040" loading="lazy" decoding="async" alt="Painel do CicloBarber mostrando quantos clientes estão em dia, próximos, atrasados e inativos, e a lista de quem merece atenção agora."><figcaption>Painel: quem merece atenção agora.</figcaption></figure>
+<figure class="shot rv" style="--i:1"><img src="img/app-resgate-lista.webp" width="480" height="1040" loading="lazy" decoding="async" alt="Tela Resgate com a lista de clientes para chamar e uma mensagem sugerida para cada um."><figcaption>Resgate: lista de quem chamar, com mensagem pronta.</figcaption></figure>
+<figure class="shot rv" style="--i:2"><img src="img/app-resgate-mensagem.webp" width="480" height="1040" loading="lazy" decoding="async" alt="Tela de edição da mensagem sugerida, com botão para abrir no WhatsApp."><figcaption>Você revisa o texto e abre no WhatsApp.</figcaption></figure>
+</div>
+<p class="note">Imagens com dados de exemplo. O CicloBarber não envia mensagens sozinho: você confirma o envio no seu WhatsApp.</p>
 </div></section>
 
 <section id="prova" hidden><div class="w">
