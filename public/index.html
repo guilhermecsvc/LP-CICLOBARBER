@@ -259,7 +259,7 @@ dialog h3{font-size:1.3rem}dialog p,dialog li{font-size:.92rem;color:var(--pr)}d
 nav{position:absolute;left:0;right:0;top:100%;background:var(--bg);border-bottom:1px solid var(--ln);display:none;padding:12px 20px}nav.o{display:block}nav ul{flex-direction:column;gap:14px}.mb{display:block}.nav .btn{display:none}
 .strip .btn{width:100%}.lamp{display:none}.lamp.m{display:block;--h:22px}}
 @media(max-width:540px){.g4{grid-template-columns:1fr}.btn{width:100%}.mk{flex-direction:column;gap:2px}}
-@media(prefers-reduced-motion:reduce){*,*:before{animation:none!important;transition:none!important;scroll-behavior:auto!important}html.js .rv{opacity:1;transform:none}.ring .rf{stroke-dashoffset:0}}
+@media(prefers-reduced-motion:reduce){.zz{animation:none}}
 
 .cost .ic{width:44px;height:44px}.cost h3{font-size:1.15rem}
 .wl{margin:14px 0 0;font-size:.92rem;color:var(--of)}.wl a{color:var(--li);font-weight:600}
@@ -721,7 +721,7 @@ html:not(.mv) .cyc .arc{stroke-dashoffset:60}
    TESTIMONIALS  : [{texto:"...", nome:"..."}] — só depoimentos REAIS. Vazio = a seção não aparece. */
 var CONFIG = { APP_URL:"https://ciclobarber-5wem.vercel.app", SALES_OPEN:false, WHATSAPP_NUMBER:"5561996760101", WHATSAPP_MSG:"Olá! Quero contratar o CicloBarber.", CONTACT_EMAIL:"ciclo.barber.apoio@gmail.com", HERO_PHOTO:"", TESTIMONIALS:[] };
 var $ = function(i){ return document.getElementById(i); };
-var RM = window.matchMedia && matchMedia("(prefers-reduced-motion: reduce)").matches;
+var RM = false; /* decisão do proprietário: o movimento fica sempre ligado */
 $("y").textContent = new Date().getFullYear();
 window.dataLayer = window.dataLayer || [];
 function track(name, extra){ var d = Object.assign({event:name}, extra||{}); window.dataLayer.push(d); try{ if (typeof gtag==="function") gtag("event",name,extra||{}); if (typeof fbq==="function") fbq("trackCustom",name,extra||{}); }catch(e){} }
@@ -870,7 +870,7 @@ f.addEventListener("submit", function(ev){
 
 <script>
 (function(){
- var RM = window.matchMedia && matchMedia("(prefers-reduced-motion: reduce)").matches;
+ var RM = false; /* decisão do proprietário: o movimento fica sempre ligado */
  if (RM) document.documentElement.classList.add("rm");
  if (RM || !("IntersectionObserver" in window)) return;
  document.documentElement.classList.add("mv");
