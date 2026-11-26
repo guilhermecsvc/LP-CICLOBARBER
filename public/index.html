@@ -454,12 +454,28 @@ html:not(.mv) .cyc .arc{stroke-dashoffset:60}
 .spc{display:block;height:0;pointer-events:none}
 .pinT{position:sticky;top:80px}
 </style>
+
+<style id="v4">
+#imagine.im4{margin-top:56px}
+#imagine.im4 h2{font-size:clamp(1.5rem,3.4vw,2.2rem);max-width:760px}
+#imagine.im4 .tp{display:block;margin-top:22px}
+#imagine.im4 #t1::before{content:none;display:none}
+#imagine.im4 .tp ul{grid-template-columns:repeat(3,1fr);gap:14px}
+#imagine.im4 .tp li{border-color:rgba(201,242,100,.4);font-size:1.05rem;line-height:1.5}
+@media(max-width:900px){#imagine.im4 .tp ul{grid-template-columns:1fr}#imagine.im4{margin-top:40px}}
+.how{max-width:820px;margin:34px auto 0;padding:22px 26px;border:1px solid var(--ln);border-radius:16px;background:var(--gr)}
+.how .va{margin:0 0 6px;color:var(--am);font-weight:600}
+.how .sp{margin:8px 0 0}
+.how #regras{margin-top:12px;color:var(--of);font-size:.92rem}
+.faq4{margin-top:22px;max-width:560px}
+.bento{grid-template-columns:repeat(4,1fr)}
+</style>
 </head>
 <body>
 
 <header><div class="w nav">
 <a class="lg" href="#topo" aria-label="CicloBarber">CicloBarber</a>
-<nav id="nav" aria-label="Principal"><ul><li><a href="#como-funciona">Como funciona</a></li><li><a href="#recursos">Benefícios</a></li><li><a href="#planos">Preços</a></li><li><a href="#para-quem">Para quem é</a></li></ul></nav>
+<nav id="nav" aria-label="Principal"><ul><li><a href="#como-funciona">Como funciona</a></li><li><a href="#recursos">Benefícios</a></li><li><a href="#planos">Preços</a></li><li><a href="#contato">Dúvidas</a></li></ul></nav>
 <a class="btn p" href="#planos" data-cta="header">Contratar agora</a>
 <button class="mb" id="mb" aria-expanded="false" aria-controls="nav">Menu</button>
 </div></header>
@@ -482,85 +498,63 @@ html:not(.mv) .cyc .arc{stroke-dashoffset:60}
 <div>
 <span class="eb">Retenção inteligente para barbearias</span>
 <h1>Saiba quem precisa <em class="sf">voltar</em> à sua barbearia antes de perder o cliente.</h1>
-<p class="sub">Com o CicloBarber, você acompanha o ciclo de retorno dos seus clientes, identifica quem está atrasado e descobre oportunidades para trazer de volta quem deixou de aparecer.</p>
+<p class="sub">Acompanhe o ritmo de retorno de cada cliente, veja quem está atrasado e chame de volta quem deixou de aparecer.</p>
 <div class="cta"><a class="btn p" href="#planos" data-cta="hero_principal">Quero contratar o CicloBarber</a><a class="btn s" href="#dor" data-cta="hero_secundario">Conhecer mais</a></div>
-<p>Mais clareza sobre sua clientela. Menos clientes esquecidos. Comece sem depender de planilhas ou da memória.</p>
 </div>
 <div class="hwrap"><figure class="hshots"><img class="sd" src="img/app-resgate-lista.webp" width="480" height="1040" decoding="async" alt="Tela Resgate com a lista de clientes para chamar e uma mensagem sugerida para cada um."><img class="ct" src="img/app-painel.webp" width="480" height="1040" fetchpriority="high" decoding="async" alt="Painel do CicloBarber mostrando clientes em dia, próximos, atrasados e inativos, com a lista de quem merece atenção agora."><img class="sd" src="img/app-resgate-mensagem.webp" width="480" height="1040" decoding="async" alt="Tela de edição da mensagem sugerida, com botão para abrir no WhatsApp."><figcaption>Telas do app, com dados de exemplo.</figcaption></figure><span class="chip c1"><i style="--c:var(--rd)"></i>Atrasado</span><span class="chip c2"><i style="--c:var(--am)"></i>Próximo</span><span class="chip c3"><i style="--c:var(--ok)"></i>Em dia</span></div>
 </div></section>
 
-<div class="mq" aria-hidden="true"><div id="mqt"></div></div>
 
 <section class="alt pat" id="dor"><div class="w">
-<span class="eb">O desafio do barbeiro</span>
 <h2 class="rv">O problema não é só conquistar clientes. É fazer com que eles <em class="sf">voltem</em>.</h2>
 <div class="g g3">
-<div class="card rv" style="--i:0"><div class="ic"><svg viewBox="0 0 24 24"><circle cx="12" cy="8" r="4"/><path d="M4 21c0-4 4-6 8-6M17 17l4 4M21 17l-4 4"/></svg></div><h3>Clientes que desaparecem</h3><p>O cliente frequentava a barbearia, mas deixou de aparecer. Sem acompanhamento, o barbeiro pode demorar para perceber.</p></div>
-<div class="card rv" style="--i:1"><div class="ic"><svg viewBox="0 0 24 24"><path d="M9 18h6M10 22h4M12 2a7 7 0 0 0-4 12.700V16h8v-1.300A7 7 0 0 0 12 2z"/></svg></div><h3>Dependência da memória</h3><p>O profissional precisa lembrar quem cortou há duas semanas, quem costuma voltar mensalmente e quem está há muito tempo sem aparecer.</p></div>
-<div class="card rv" style="--i:2"><div class="ic"><svg viewBox="0 0 24 24"><path d="M21 12a8 8 0 0 1-12 7l-5 1 1-5A8 8 0 1 1 21 12z"/></svg></div><h3>WhatsApp desorganizado</h3><p>Conversas, confirmações e contatos ficam misturados. É difícil saber quem merece atenção primeiro.</p></div>
-<div class="card rv" style="--i:0"><div class="ic"><svg viewBox="0 0 24 24"><rect x="3" y="4" width="18" height="17" rx="2"/><path d="M8 2v4M16 2v4M3 10h18"/></svg></div><h3>Agenda com períodos vazios</h3><p>É difícil identificar clientes antigos que poderiam voltar e ajudar a preencher horários disponíveis.</p></div>
-<div class="card rv" style="--i:1"><div class="ic"><svg viewBox="0 0 24 24"><path d="M4 4h16v16H4zM8 9h8M8 13h8M8 17h5"/></svg></div><h3>Falta de histórico organizado</h3><p>Sem acompanhamento adequado, não dá para visualizar com facilidade a frequência e o comportamento de retorno de cada cliente.</p></div>
-<div class="card rv" style="--i:2"><div class="ic"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg></div><h3>Contato no momento errado</h3><p>Mandar mensagem para todo mundo da mesma forma é inconveniente e ineficiente. Cada cliente tem seu próprio intervalo de retorno.</p></div>
-</div></div></section>
-
-<section class="pat" id="para-quem"><div class="w">
-<span class="eb">Para quem é</span>
-<h2 class="rv">Para quem sente na pele o peso de uma barbearia desorganizada.</h2>
-<div class="g g3 pq">
-<div class="card rv" style="--i:0"><h3>O barbeiro que faz tudo sozinho</h3><p>Atende, responde mensagem, controla o caixa e ainda leva as contas para casa. Falta tempo e sobra cansaço.</p></div>
-<div class="card rv" style="--i:1"><h3>O dono que não sabe quanto sobrou</h3><p>A barbearia vive cheia, mas no fim do mês o dinheiro parece não aparecer. Sem números claros, é difícil saber onde está o problema.</p></div>
-<div class="card rv" style="--i:2"><h3>Quem calcula comissão na mão</h3><p>Cada fechamento vira conta demorada, risco de erro e conversa difícil com a equipe.</p></div>
-<div class="card rv" style="--i:0"><h3>A barbearia que cresce sem processo</h3><p>Entrou mais um barbeiro, mais uma cadeira, mais clientes. A gestão continua do mesmo jeito, e o improviso começa a custar caro.</p></div>
-<div class="card rv" style="--i:1"><h3>Quem vê cliente sumir sem perceber</h3><p>Clientes antigos deixam de aparecer e ninguém nota a tempo. Cada um que não volta é uma cadeira que poderia estar ocupada.</p></div>
-<div class="card rv" style="--i:2"><h3>Quem vive apagando incêndio</h3><p>Sem rotina, sem controle e sem tempo para planejar, o dia a dia vira uma sequência de urgências.</p></div>
+<div class="card rv" style="--i:0"><div class="ic"><svg viewBox="0 0 24 24"><circle cx="12" cy="8" r="4"/><path d="M4 21c0-4 4-6 8-6M17 17l4 4M21 17l-4 4"/></svg></div><h3>Clientes que somem</h3><p>Ele deixou de aparecer e ninguém percebeu a tempo.</p></div>
+<div class="card rv" style="--i:1"><div class="ic"><svg viewBox="0 0 24 24"><path d="M9 18h6M10 22h4M12 2a7 7 0 0 0-4 12.700V16h8v-1.300A7 7 0 0 0 12 2z"/></svg></div><h3>Tudo na memória</h3><p>Quem cortou há duas semanas? Quem não aparece há meses?</p></div>
+<div class="card rv" style="--i:2"><div class="ic"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg></div><h3>Mensagem igual para todos</h3><p>Cada cliente tem o seu intervalo. Chamar todo mundo do mesmo jeito não funciona.</p></div>
 </div>
-<p class="rv" style="margin-top:28px;font-size:1.05rem;color:var(--of)">Se você se reconheceu em algum deles, o CicloBarber foi pensado para você.</p>
-</div></section>
-
-<section class="alt" id="imagine"><div class="w">
-<h2 class="rv" style="font-size:clamp(1.5rem,3.4vw,2.2rem)">Agora <em class="sf">imagine</em> clientes e financeiro no mesmo lugar.</h2>
-<div class="tabs" role="tablist" aria-label="Comparação">
-<button role="tab" id="b0" aria-selected="false" aria-controls="t0">Sem CicloBarber</button>
-<button role="tab" id="b1" aria-selected="true" aria-controls="t1">Com CicloBarber</button>
+<div id="imagine" class="im4">
+<h2 class="rv">Agora <em class="sf">imagine</em> clientes e financeiro no mesmo lugar.</h2>
+<div class="tp on" id="t1"><ul>
+<li style="--i:0">Clientes, atendimentos e retorno organizados em um só lugar.</li>
+<li style="--i:1">Receitas, despesas, caixa e comissões claras para você enxergar o mês.</li>
+<li style="--i:2">Você sabe quem está perto de voltar, atrasado ou inativo, sem depender da memória.</li>
+</ul></div>
 </div>
-<div class="tp" id="t0" role="tabpanel" aria-labelledby="b0"><ul><li style="--i:0">Você fecha a cadeira e continua trabalhando: caderno, planilha, WhatsApp e calculadora.</li><li style="--i:1">O fim do mês chega e você não sabe ao certo quanto entrou, quanto saiu e quanto sobrou.</li><li style="--i:2">A comissão de cada barbeiro é calculada na mão, de memória, e vira discussão.</li><li style="--i:3">Clientes somem sem serem percebidos e você só nota quando já é tarde.</li><li style="--i:4">A cabeça não desliga: tudo depende de você lembrar de tudo, o tempo todo.</li></ul></div>
-<div class="tp on" id="t1" role="tabpanel" aria-labelledby="b1"><ul><li style="--i:0">Clientes, atendimentos e retorno organizados em um só lugar.</li><li style="--i:1">Receitas, despesas e caixa organizados para você enxergar o mês com clareza.</li><li style="--i:2">A comissão de cada barbeiro calculada a partir dos atendimentos registrados.</li><li style="--i:3">Você sabe quem está perto de voltar, atrasado ou inativo, sem depender da memória.</li><li style="--i:4">Mais chance de desligar do trabalho com a cabeça mais leve.</li></ul></div>
 </div></section>
-
-<div class="strip"><div class="w"><p>Chega de levar a barbearia na cabeça para casa.</p><a class="btn p" href="#planos" data-cta="faixa_1">Quero contratar o CicloBarber</a></div></div>
 
 <section class="alt" id="como-funciona"><div class="w">
-<span class="eb">Como funciona</span>
 <h2 class="rv">Um <em class="sf">ciclo simples</em> para cuidar melhor da sua clientela.</h2>
 <div class="sgrid">
 <svg class="ring rv" id="ring" viewBox="0 0 220 220" role="img" aria-label="Ciclo contínuo: corte, relacionamento, retorno"><circle class="tr" cx="110" cy="110" r="86"/><circle class="rf" cx="110" cy="110" r="86" pathLength="100" transform="rotate(-90 110 110)"/><g class="orb"><circle cx="110" cy="24" r="8" fill="#C9F264"/></g><text x="110" y="106" text-anchor="middle">CORTE</text><text x="110" y="130" text-anchor="middle">RETORNO</text></svg>
 <div>
-<div class="step rv" style="--i:0"><b>1</b><div><h3>Cadastre seus clientes</h3><p>Organize os dados básicos e o histórico de atendimento.</p></div></div>
-<div class="step rv" style="--i:1"><b>2</b><div><h3>Registre os atendimentos</h3><p>Cada visita ajuda a construir uma visão melhor da frequência daquele cliente.</p></div></div>
-<div class="step rv" style="--i:2"><b>3</b><div><h3>Acompanhe o ciclo de retorno</h3><p>O sistema usa o histórico disponível para ajudar a identificar quem está próximo do retorno, atrasado ou inativo.</p></div></div>
-<div class="step rv" style="--i:3"><b>4</b><div><h3>Tome uma ação</h3><p>Avalie quais clientes merecem contato e escolha como conduzir o relacionamento.</p></div></div>
-<p class="note">Com pouco histórico, as estimativas são iniciais e melhoram à medida que novos atendimentos são registrados.</p>
+<div class="step rv" style="--i:0"><b>1</b><div><h3>Cadastre seus clientes</h3><p>Dados básicos e histórico de cortes.</p></div></div>
+<div class="step rv" style="--i:1"><b>2</b><div><h3>Registre os atendimentos</h3><p>Cada visita mostra a frequência do cliente.</p></div></div>
+<div class="step rv" style="--i:2"><b>3</b><div><h3>Acompanhe o ciclo de retorno</h3><p>Veja quem está perto de voltar, atrasado ou inativo.</p></div></div>
+<div class="step rv" style="--i:3"><b>4</b><div><h3>Chame de volta</h3><p>Escolha quem merece contato e envie pelo seu WhatsApp.</p></div></div>
+<p class="note">Com pouco histórico, a estimativa é inicial e melhora a cada visita.</p>
 </div></div></div></section>
 
 <section id="recursos" class="pat"><div class="w">
-<span class="eb">Benefícios para o dono</span>
 <h2 class="rv">Você <em class="sf">no comando</em>: dinheiro, equipe e clientes sob controle.</h2>
-<div class="bento"><div class="bx big rv" style="--i:0"><div class="viz vbig" aria-hidden="true"><svg class="cyc" viewBox="0 0 120 120" aria-hidden="true"><circle class="trk" cx="60" cy="60" r="46"/><circle class="arc" cx="60" cy="60" r="46"/><g class="orb"><circle cx="60" cy="14" r="6"/></g></svg><span class="pin" style="left:14%;top:18%;--c:var(--ok);animation-delay:-0s"><i></i>Em dia</span><span class="pin" style="left:60%;top:12%;--c:var(--am);animation-delay:-2s"><i></i>Próximo</span><span class="pin" style="left:34%;top:70%;--c:var(--rd);animation-delay:-4s"><i></i>Atrasado</span></div><h3>Clientes que voltam</h3><p>Em vez de torcer para o cliente voltar, você sabe quem está perto de voltar ou sumindo e age no momento certo. Nosso principal diferencial.</p></div><div class="bx rv" style="--i:1"><div class="viz" aria-hidden="true"><span class="pin" style="left:10%;top:22%;--c:var(--ok);animation-delay:-0s"><i></i>Entrou</span><span class="pin" style="left:52%;top:52%;--c:var(--rd);animation-delay:-2s"><i></i>Saiu</span></div><h3>Caixa sem susto</h3><p>Veja o que entrou, o que saiu e quanto tem em caixa, sem depender de caderno ou planilha.</p></div><div class="bx rv" style="--i:2"><div class="viz" aria-hidden="true"><span class="pin" style="left:8%;top:20%;--c:var(--ok);animation-delay:-0s"><i></i>Receitas</span><span class="pin" style="left:50%;top:56%;--c:var(--rd);animation-delay:-2s"><i></i>Despesas</span></div><h3>Receitas e despesas claras</h3><p>Acompanhe para onde vai o dinheiro e quanto a barbearia rende no mês.</p></div><div class="bx w2 rv" style="--i:3"><div class="viz" aria-hidden="true"><span class="pin" style="left:8%;top:22%;--c:var(--li);animation-delay:-0s"><i></i>Cortes</span><span class="pin" style="left:58%;top:54%;--c:var(--li);animation-delay:-2s"><i></i>Comissão</span></div><h3>Comissão sem briga</h3><p>A comissão de cada barbeiro é calculada a partir dos atendimentos registrados, com transparência para os dois lados.</p></div><div class="bx rv" style="--i:0"><div class="viz" aria-hidden="true"><span class="pin" style="left:14%;top:34%;--c:var(--li);animation-delay:-0s"><i></i>Barbeiros</span></div><h3>Equipe sob visão</h3><p>Saiba o que cada barbeiro atendeu e como a equipe está indo.</p></div><div class="bx rv" style="--i:1"><div class="viz" aria-hidden="true"><span class="pin" style="left:8%;top:22%;--c:var(--li);animation-delay:-0s"><i></i>Metas</span><span class="pin" style="left:50%;top:56%;--c:var(--li);animation-delay:-2s"><i></i>Preços</span></div><h3>Decisões com números</h3><p>Defina preços, metas e horários com base no que realmente aconteceu na barbearia.</p></div><div class="bx rv" style="--i:2"><div class="viz" aria-hidden="true"><span class="pin" style="left:16%;top:34%;--c:var(--li);animation-delay:-0s"><i></i>Ritmo</span></div><h3>Tempo de volta</h3><p>Menos horas administrando fora do expediente e mais espaço para atender, descansar e crescer.</p></div><div class="bx rv" style="--i:3"><div class="viz" aria-hidden="true"><span class="pin" style="left:12%;top:34%;--c:var(--li);animation-delay:-0s"><i></i>Organizada</span></div><h3>Imagem profissional</h3><p>Uma barbearia organizada passa mais confiança para clientes e para a equipe.</p></div></div>
+<div class="bento">
+<div class="bx big rv" style="--i:0"><div class="viz vbig" aria-hidden="true"><svg class="cyc" viewBox="0 0 120 120" aria-hidden="true"><circle class="trk" cx="60" cy="60" r="46"/><circle class="arc" cx="60" cy="60" r="46"/><g class="orb"><circle cx="60" cy="14" r="6"/></g></svg><span class="pin" style="left:14%;top:18%;--c:var(--ok);animation-delay:-0s"><i></i>Em dia</span><span class="pin" style="left:60%;top:12%;--c:var(--am);animation-delay:-2s"><i></i>Próximo</span><span class="pin" style="left:34%;top:70%;--c:var(--rd);animation-delay:-4s"><i></i>Atrasado</span></div><h3>Clientes que voltam</h3><p>Em vez de torcer para o cliente voltar, você sabe quem está perto de sumir e age no momento certo.</p></div>
+<div class="bx rv" style="--i:1"><div class="viz" aria-hidden="true"><span class="pin" style="left:10%;top:22%;--c:var(--ok);animation-delay:-0s"><i></i>Entrou</span><span class="pin" style="left:52%;top:52%;--c:var(--rd);animation-delay:-2s"><i></i>Saiu</span></div><h3>Caixa e receitas claras</h3><p>O que entrou, o que saiu e quanto sobrou no mês.</p></div>
+<div class="bx rv" style="--i:2"><div class="viz" aria-hidden="true"><span class="pin" style="left:8%;top:22%;--c:var(--li);animation-delay:-0s"><i></i>Cortes</span><span class="pin" style="left:58%;top:54%;--c:var(--li);animation-delay:-2s"><i></i>Comissão</span></div><h3>Comissão sem briga</h3><p>Calculada a partir dos atendimentos registrados.</p></div>
+<div class="bx w2 rv" style="--i:3"><div class="viz" aria-hidden="true"><span class="pin" style="left:8%;top:22%;--c:var(--li);animation-delay:-0s"><i></i>Barbeiros</span><span class="pin" style="left:50%;top:56%;--c:var(--li);animation-delay:-2s"><i></i>Metas</span></div><h3>Equipe sob visão</h3><p>Saiba o que cada barbeiro atendeu e decida preços e metas com base em números reais.</p></div>
+</div>
 <p class="note">O sistema ajuda a organizar decisões, mas não garante que todo cliente retorne nem que o faturamento aumente.</p>
 </div></section>
 
 <section class="alt" id="demo"><div class="w">
-<span class="eb">Veja na prática</span>
-<h2 class="rv">Escolha um cliente e simule o ritmo dele.</h2><p class="hint">Role a página: o cliente e o ritmo mudam sozinhos. Você também pode mexer.</p>
+<h2 class="rv">Veja na prática: cada cliente tem o seu ritmo.</h2><p class="hint">Role a página e o cliente muda sozinho. Você também pode mexer.</p>
 <div class="dg">
 <div class="cls" id="cls" role="group" aria-label="Clientes de demonstração"></div>
 <div class="pn" id="pn"></div>
 </div>
-<p class="note">Nomes e dados fictícios. O ritmo de cada cliente é a mediana dos últimos intervalos entre as visitas.</p>
+<p class="note">Nomes e dados fictícios.</p>
 </div></section>
 
 <section id="app" aria-labelledby="app-h"><div class="w">
-<span class="eb">O app por dentro</span>
 <h2 class="rv" id="app-h">Telas <em class="sf">reais</em> do CicloBarber.</h2>
 <div class="stage"><div class="shots rv">
 <figure class="shot"><img src="img/app-painel.webp" width="480" height="1040" loading="lazy" decoding="async" alt="Painel do CicloBarber mostrando quantos clientes estão em dia, próximos, atrasados e inativos, e a lista de quem merece atenção agora."><figcaption>Painel: quem merece atenção agora.</figcaption></figure>
@@ -570,7 +564,7 @@ html:not(.mv) .cyc .arc{stroke-dashoffset:60}
 <div class="sdots" aria-hidden="true"><i></i><i></i><i></i></div></div><p class="note">Imagens com dados de exemplo. O CicloBarber não envia mensagens sozinho: você confirma o envio no seu WhatsApp.</p>
 </div></section>
 
-<section id="seguranca" class="pat" aria-labelledby="sg-h"><div class="w"><div class="sec2"><div class="secl"><span class="eb">Segurança e controle</span><h2 class="rv" id="sg-h">Seus dados e os dos seus clientes, <em class="sf">com cuidado</em>.</h2><p class="secp">Seis cuidados com os dados da sua barbearia e dos seus clientes.</p><svg class="shield" viewBox="0 0 160 180" aria-hidden="true"><circle class="rg r1" cx="80" cy="92" r="64"/><circle class="rg r2" cx="80" cy="92" r="64"/><path class="sh" d="M80 10L146 36V86C146 128 118 156 80 172C42 156 14 128 14 86V36Z"/><path class="ck" d="M52 92l20 20 38-42"/></svg><p class="note">Detalhes na <a class="lk" href="/privacidade">Política de Privacidade</a> e nos <a class="lk" href="/termos">Termos de Uso</a>.</p></div><div class="secr"><article class="card sc"><b class="sn">01</b><h3>Cada barbearia no seu espaço</h3><p>Os dados de cada barbearia ficam isolados: uma barbearia não vê nem altera os dados de outra. Isso é garantido por regras no próprio banco de dados.</p></article><article class="card sc"><b class="sn">02</b><h3>Você confirma cada mensagem</h3><p>O CicloBarber sugere o texto e abre o seu WhatsApp. Quem envia é você, nada é disparado sozinho.</p></article><article class="card sc"><b class="sn">03</b><h3>Pagamento na página do Asaas</h3><p>Pix, boleto ou cartão são pagos na página segura do Asaas. O CicloBarber não recebe nem guarda dados de cartão.</p></article><article class="card sc"><b class="sn">04</b><h3>Banco de dados em São Paulo</h3><p>Os dados da sua barbearia ficam em servidores no Brasil, com conexão cifrada (HTTPS) e senhas guardadas de forma cifrada.</p></article><article class="card sc"><b class="sn">05</b><h3>Exclusão quando o cliente pedir</h3><p>Se um cliente pedir para sair, a função "Excluir cliente" apaga os dados pessoais dele, conforme a LGPD.</p></article><article class="card sc"><b class="sn">06</b><h3>Você sai com os seus dados</h3><p>Ao encerrar, sua conta fica 30 dias em modo somente leitura para você exportar o que precisar.</p></article></div></div></div></section>
+<section id="seguranca" class="pat" aria-labelledby="sg-h"><div class="w"><div class="sec2"><div class="secl"><h2 class="rv" id="sg-h">Seus dados e os dos seus clientes, <em class="sf">com cuidado</em>.</h2><svg class="shield" viewBox="0 0 160 180" aria-hidden="true"><circle class="rg r1" cx="80" cy="92" r="64"/><circle class="rg r2" cx="80" cy="92" r="64"/><path class="sh" d="M80 10L146 36V86C146 128 118 156 80 172C42 156 14 128 14 86V36Z"/><path class="ck" d="M52 92l20 20 38-42"/></svg><p class="note">Detalhes na <a class="lk" href="/privacidade">Política de Privacidade</a> e nos <a class="lk" href="/termos">Termos de Uso</a>.</p></div><div class="secr"><article class="card sc"><b class="sn">01</b><h3>Cada barbearia no seu espaço</h3><p>Uma barbearia nunca vê nem altera os dados de outra. Isso é garantido pelo próprio banco de dados.</p></article><article class="card sc"><b class="sn">02</b><h3>Você confirma cada mensagem</h3><p>O CicloBarber sugere o texto e abre o seu WhatsApp. Quem envia é você; nada é disparado sozinho.</p></article><article class="card sc"><b class="sn">03</b><h3>Pagamento e dados protegidos</h3><p>Você paga na página segura do Asaas, sem dados de cartão no CicloBarber. Seus dados ficam em servidores no Brasil, e você pode excluir clientes a pedido deles ou exportar tudo ao encerrar.</p></article></div></div></div></section>
 
 <section id="prova" hidden><div class="w">
 <span class="eb">Quem já usa</span>
@@ -580,9 +574,8 @@ html:not(.mv) .cyc .arc{stroke-dashoffset:60}
 
 
 <section id="planos" data-per="m" aria-labelledby="pl-h"><div class="w">
-<span class="eb">Planos</span>
 <h2 class="rv" id="pl-h">Escolha o plano para o tamanho da sua barbearia.</h2>
-<p class="rv" style="color:var(--pr);max-width:680px;margin-top:12px">O CicloBarber não é agenda online: ele funciona junto com a agenda que você já usa. As mensagens são modelos prontos, e o envio é feito por você pelo WhatsApp.</p>
+<p class="rv" style="color:var(--pr);max-width:680px;margin-top:12px">O CicloBarber não é agenda online: funciona junto com a agenda que você já usa. O envio das mensagens é feito por você, pelo WhatsApp.</p>
 <div class="pt" role="group" aria-label="Período de cobrança">
 <button type="button" aria-pressed="true" data-per="m">Mensal</button>
 <button type="button" aria-pressed="false" data-per="a">Anual <span class="pb">2 meses grátis</span></button>
@@ -595,7 +588,7 @@ html:not(.mv) .cyc .arc{stroke-dashoffset:60}
 <p class="pf">Para o barbeiro que trabalha sozinho.</p>
 <p class="pr"><span class="pm"><b>R$ 49</b>/mês</span><span class="pa"><b>R$ 490</b>/ano</span></p>
 <p class="pq"><span class="pm">Cobrança mensal.</span><span class="pa">Equivale a R$ 40,83/mês. Você paga 10 meses e usa 12.</span></p>
-<ul><li>1 barbeiro e até 300 clientes ativos</li><li>Cadastro de clientes com histórico de cortes</li><li>Ritmo de cada cliente: em dia, perto de voltar, atrasado ou sumido</li><li>Painel “quem merece atenção agora”</li><li>Resgate completo de clientes atrasados e sumidos, sem limite</li><li>Mensagem pronta para o WhatsApp (tom padrão)</li><li>Receita do mês, ticket médio e receita em risco</li></ul>
+<ul><li>1 barbeiro, até 300 clientes ativos e histórico de cortes</li><li>Ritmo de cada cliente e painel “quem merece atenção agora”</li><li>Resgate de atrasados e sumidos, com mensagem pronta para o WhatsApp</li><li>Receita do mês, ticket médio e receita em risco</li></ul>
 <a class="btn s" href="#contato" data-plano="Essencial" data-cta="plano_essencial">Contratar Essencial<span class="sro"> (continua para a contratação)</span></a>
 </article>
 
@@ -606,7 +599,7 @@ html:not(.mv) .cyc .arc{stroke-dashoffset:60}
 <p class="pr"><span class="pm"><b>R$ 89</b>/mês</span><span class="pa"><b>R$ 890</b>/ano</span></p>
 <p class="pq"><span class="pm">Cobrança mensal.</span><span class="pa">Equivale a R$ 74,17/mês. Você paga 10 meses e usa 12.</span></p>
 <p class="pl0">Tudo do Essencial, mais:</p>
-<ul><li>Até 3 barbeiros e clientes sem limite</li><li>Importar clientes de uma planilha (até 2.000 por vez, com a data do último corte), para quem já tem os clientes em outro sistema</li><li>Acesso próprio para até 3 barbeiros: cada um registra os próprios cortes, vê a própria comissão e chama de volta os clientes sumidos</li><li>Mensagens com o estilo da sua barbearia (tom, emojis e tamanho)</li><li>Receita recuperada: quanto dinheiro voltou com o Resgate</li><li>Despesas, contas fixas, contas a pagar e resultado do mês</li><li>Caixa diário</li><li>Comissões dos barbeiros</li></ul>
+<ul><li>Até 3 barbeiros e clientes sem limite</li><li>Acesso próprio para cada barbeiro: registra os cortes, vê a própria comissão e chama clientes sumidos</li><li>Importação de clientes por planilha (até 2.000 por vez)</li><li>Mensagens com o estilo da sua barbearia e receita recuperada</li><li>Despesas, contas, caixa diário e comissões</li></ul>
 <a class="btn p" href="#contato" data-plano="Profissional" data-cta="plano_profissional">Contratar Profissional<span class="sro"> (continua para a contratação)</span></a>
 </article>
 
@@ -622,41 +615,33 @@ html:not(.mv) .cyc .arc{stroke-dashoffset:60}
 </article>
 
 </div>
-<p class="pz rv">Se o CicloBarber trouxer de volta 2 clientes por mês, ele já se pagou.</p>
-<p class="rv" style="text-align:center;color:var(--pr);font-size:.92rem;margin:10px auto 0;max-width:640px">Reembolso integral em até 7 dias após o primeiro pagamento, e cancelamento a qualquer momento pelo app. Detalhes nos <a href="/termos" style="color:var(--li)">Termos de Uso</a>.</p>
-</div></section>
-
-<section class="alt" id="contratacao" aria-labelledby="ct-h"><div class="w">
-<span class="eb">Contratação</span>
-<h2 class="rv" id="ct-h">Como funciona a contratação.</h2>
-<p class="rv" id="vend-aviso" style="color:var(--am);font-weight:600;margin-top:10px">A contratação online abre em breve. Até lá, fale com a equipe pelo WhatsApp.</p>
-<ol class="sp rv" style="max-width:760px">
-<li>Escolha o plano e o período e clique em Contratar.</li>
-<li>Crie sua conta, confirme seu e-mail e cadastre sua barbearia.</li>
-<li>Pague na página segura do Asaas, por Pix, boleto ou cartão. Os dados do seu cartão não passam por esta página.</li>
-<li>Depois que o pagamento é confirmado, seu plano é liberado na sua conta.</li>
+<div class="how rv"><p id="vend-aviso" class="va">A contratação online abre em breve. Até lá, fale com a equipe pelo WhatsApp.</p>
+<ol class="sp">
+<li>Escolha o plano e o período.</li>
+<li>Crie sua conta e cadastre sua barbearia.</li>
+<li>Pague na página segura do Asaas (Pix, boleto ou cartão).</li>
+<li>Pagamento confirmado, o plano é liberado.</li>
 </ol>
-<div class="card rv" id="regras" hidden style="max-width:760px">
-<h3>Cancelamento, reembolso e suporte</h3>
-<ul style="padding-left:20px;margin:10px 0 0;display:grid;gap:8px;color:var(--of)">
-<li>Cancele quando quiser, pelo app. Você continua com acesso até o fim do período já pago.</li>
-<li>Reembolso integral em até 7 dias após a primeira contratação. Depois disso, não há reembolso proporcional, inclusive no plano anual.</li>
-<li>Ao fim do período, sua conta fica só para leitura por 30 dias, com opção de exportar seus dados. Depois, os dados são excluídos.</li>
-<li>Suporte pelo WhatsApp em horário comercial (segunda a sexta, das 9h às 18h), com resposta em até 1 dia útil nos planos Essencial e Profissional.</li>
-</ul>
-<p style="margin:12px 0 0;font-size:.88rem">As regras completas estão nos <a href="/termos">Termos de Uso</a>.</p>
+<div id="regras" hidden><ul><li>Cancele quando quiser, pelo app. O acesso vai até o fim do período já pago.</li><li>Reembolso integral em até 7 dias após a primeira contratação. Depois disso, não há reembolso proporcional, inclusive no plano anual.</li><li>Ao fim do período, a conta fica só para leitura por 30 dias, com opção de exportar seus dados. Depois, os dados são excluídos.</li><li>Suporte pelo WhatsApp em horário comercial (segunda a sexta, das 9h às 18h), com resposta em até 1 dia útil nos planos Essencial e Profissional.</li></ul></div>
 </div>
+<p class="rv" style="text-align:center;color:var(--pr);font-size:.92rem;margin:10px auto 0;max-width:640px">Reembolso integral em até 7 dias após o primeiro pagamento, e cancelamento a qualquer momento pelo app. Detalhes nos <a href="/termos" style="color:var(--li)">Termos de Uso</a>.</p>
 </div></section>
 
 <section class="fin pat" id="contato"><div class="glow" aria-hidden="true"></div><div class="w fg">
 <div>
-<h2>Ficou com alguma dúvida antes de contratar?</h2>
-<p style="font-size:1.05rem">Envie sua pergunta e nossa equipe responde pelo WhatsApp. Se já se decidiu, escolha seu plano na seção de preços.</p>
-<p><a class="btn p" href="#planos" data-cta="duvida_ver_planos">Ver planos e contratar</a></p>
-<a class="btn s" href="#contato" data-wa data-cta="final_equipe">Prefere conversar? Fale com a equipe</a>
+<h2>Ficou com dúvida?</h2>
+<div class="faq4">
+<details><summary>O CicloBarber é uma agenda?</summary><p>Não. Ele funciona junto com a agenda que você já usa e foca no ciclo de retorno da clientela.</p></details>
+<details><summary>Como ele sabe quem está atrasado?</summary><p>Compara o tempo desde o último corte com o ritmo habitual de cada cliente, a partir dos atendimentos que você registra.</p></details>
+<details><summary>Ele envia mensagens pelo WhatsApp?</summary><p>Ele sugere o texto e abre o WhatsApp com a mensagem pronta. O envio é feito por você, sem disparo automático.</p></details>
+<details><summary>Serve para quem trabalha sozinho?</summary><p>Sim. O plano Essencial foi pensado para o barbeiro autônomo.</p></details>
+<details><summary>Como faço para contratar?</summary><p>Escolha o plano e o período na seção de preços, crie sua conta e pague na página segura do Asaas.<span id="faq-aviso"> A contratação online abre em breve; até lá, fale com a equipe pelo WhatsApp.</span></p></details>
+</div>
+<p style="margin-top:18px"><a class="btn p" href="#planos" data-cta="duvida_ver_planos">Ver planos e contratar</a></p>
+<p style="margin-top:10px"><a class="lk" href="#contato" data-wa data-cta="final_equipe">Prefere conversar? Fale com a equipe</a></p>
 </div>
 <form id="f" novalidate>
-<h3 style="margin-bottom:16px">Envie sua dúvida</h3>
+<h3 style="margin-bottom:16px">Envie sua pergunta</h3>
 <div class="fld"><label for="n">Nome</label><input id="n" name="nome" type="text" autocomplete="name" required><span class="er" id="en"></span></div>
 <div class="fld"><label for="d">Sua dúvida</label><textarea id="d" name="duvida" rows="3" maxlength="600" required></textarea><span class="er" id="ed"></span></div>
 <button class="btn p" type="submit" style="width:100%" data-cta="formulario_duvida">Enviar dúvida pelo WhatsApp</button>
@@ -665,34 +650,13 @@ html:not(.mv) .cyc .arc{stroke-dashoffset:60}
 <p class="pv">Ao enviar, abriremos o seu WhatsApp com a mensagem pronta e você confirma o envio por lá. Seu nome e sua dúvida não passam por nenhum servidor nosso. Veja a <a href="/privacidade">Política de Privacidade</a>.</p>
 </form>
 </div></section>
-<section class="alt"><div class="w">
-<span class="eb">Perguntas frequentes</span>
-<h2>Dúvidas comuns</h2>
-<div style="margin-top:28px;max-width:820px">
-<details><summary>O que é o CicloBarber?</summary><p>Um sistema para barbearias que ajuda a acompanhar a frequência dos clientes e a identificar quem está próximo de voltar, atrasado ou inativo.</p></details>
-<details><summary>O CicloBarber é uma agenda de barbearia?</summary><p>Não. O CicloBarber não é agenda online: ele funciona junto com a agenda que você já usa e foca em acompanhar o ciclo de retorno da clientela.</p></details>
-<details><summary>Como o sistema identifica clientes atrasados?</summary><p>Com base no histórico de atendimentos de cada cliente e nas regras do sistema, comparando o tempo desde o último corte com o ritmo habitual dele.</p></details>
-<details><summary>Preciso registrar os atendimentos?</summary><p>Sim. Quanto mais atendimentos registrados, mais precisa fica a visão de frequência.</p></details>
-<details><summary>O sistema funciona para barbeiros autônomos?</summary><p>Sim. Foi pensado também para quem trabalha sozinho e quer acompanhar a clientela sem depender de memória ou planilhas.</p></details>
-<details><summary>Posso acompanhar clientes que cortam em intervalos diferentes?</summary><p>Sim. A ideia é considerar o ritmo de cada cliente, em vez de um prazo único para todos.</p></details>
-<details><summary>O CicloBarber envia mensagens pelo WhatsApp?</summary><p>O CicloBarber sugere uma mensagem para você revisar e abre o WhatsApp com o texto pronto. O envio é feito por você, não há disparo automático.</p></details>
-<details><summary>Quais são os planos e preços?</summary><p>Há três planos: Essencial (R$ 49/mês ou R$ 490/ano), Profissional (R$ 89/mês ou R$ 890/ano) e Equipe (R$ 149/mês ou R$ 1.490/ano, em breve). No plano anual você paga 10 meses e usa 12. Veja os detalhes na seção de preços.</p></details>
-<details><summary>Como faço para contratar?</summary><p>Escolha o plano e o período na seção de preços, crie sua conta, pague na página segura do Asaas (Pix, boleto ou cartão) e seu plano é liberado na conta.<span id="faq-aviso"> A contratação online abre em breve; até lá, fale com a equipe pelo WhatsApp.</span></p></details>
-<p style="margin-top:18px">Ficou com alguma dúvida? <a class="lk" href="#contato" data-wa data-cta="faq_equipe">Fale com a equipe</a>.</p>
-</div></div></section>
-
-<section class="fin" id="comece" aria-labelledby="cm-h"><div class="glow" aria-hidden="true"></div><div class="w" style="text-align:center;position:relative">
-<h2 id="cm-h">Veja <em class="sf">hoje</em> quem precisa voltar.</h2>
-<p style="font-size:1.05rem;max-width:560px;margin:12px auto 22px">Escolha seu plano e comece a acompanhar o ritmo de retorno da sua clientela.</p>
-<p><a class="btn p" href="#planos" data-cta="faixa_final">Ver planos e contratar</a></p>
-</div></section>
 </main>
 
 <footer><div class="w">
 <div class="fg4">
 <div class="fb"><a class="lg" href="#topo" aria-label="CicloBarber">CicloBarber</a>
 <p>Retenção inteligente para barbearias: acompanhe o ciclo de retorno dos seus clientes e saiba quem merece atenção hoje.</p></div>
-<div><h3>Navegação</h3><ul><li><a href="#como-funciona">Como funciona</a></li><li><a href="#recursos">Benefícios</a></li><li><a href="#demo">Veja na prática</a></li><li><a href="#para-quem">Para quem é</a></li></ul></div>
+<div><h3>Navegação</h3><ul><li><a href="#como-funciona">Como funciona</a></li><li><a href="#recursos">Benefícios</a></li><li><a href="#demo">Veja na prática</a></li><li><a href="#contato">Dúvidas</a></li></ul></div>
 <div><h3>Informações</h3><ul><li><a href="/privacidade">Política de Privacidade</a></li><li><a href="/termos">Termos de Uso</a></li></ul></div>
 <div><h3>Contato</h3><ul><li><a href="#planos">Quero contratar</a></li><li id="ct" hidden></li></ul></div>
 </div>
@@ -779,7 +743,7 @@ if (CONFIG.TESTIMONIALS.length){ var th=""; CONFIG.TESTIMONIALS.forEach(function
 /* faixa em movimento */
 var words = ["Corte","Retorno","Ciclo","Relacionamento","Fidelização","Próximo","Atrasado","Inativo"], mh = "";
 for (var k = 0; k < 2; k++) words.forEach(function(w){ mh += "<span>" + w + "</span><span>✂</span>"; });
-$("mqt").innerHTML = mh;
+if ($("mqt")) $("mqt").innerHTML = mh;
 
 /* menu mobile */
 var mb = $("mb"), nav = $("nav");
@@ -796,9 +760,6 @@ heroTick(); if (!RM) setInterval(heroTick, 3600);
 }
 
 /* abas */
-var tb = [$("b0"), $("b1")], tp = [$("t0"), $("t1")];
-tb.forEach(function(b,i){ b.addEventListener("click", function(){ tb.forEach(function(x,j){ x.setAttribute("aria-selected", i===j); tp[j].className = "tp" + (i===j ? " on" : ""); }); }); });
-
 /* demo interativa */
 var STS = [{id:"EM DIA",c:"#6BAA82",t:"Dentro do ritmo dele. Nenhuma ação necessária agora."},{id:"PRÓXIMO",c:"#C9F264",t:"Perto do período habitual de retorno. Pode ser um bom momento para lembrar o cliente."},{id:"ATRASADO",c:"#E8B04A",t:"Passou do intervalo esperado. Vale avaliar um contato."},{id:"INATIVO",c:"#E5645A",t:"Muito além do ritmo habitual. Avalie um convite para voltar."}];
 function stt(d,r){ var x = d / r; return x < .7 ? 0 : x < 1 ? 1 : x < 1.5 ? 2 : 3; }
